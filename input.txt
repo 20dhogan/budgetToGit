@@ -1,0 +1,25 @@
+0. Month to report on: 5
+1. Year: 2024
+
+3. savings: 10230.67
+4. checking: 1200
+5. Amount owe to credit: 274.85
+6. rent: 680
+7. natural gas: 33
+8. electricity: 15
+9. school supplies(blue): 4.34 2.23 32
+
+11. groceries(yellow): 67.54 58.69 56.95 34.56 46.95 32
+12. grocery goal: 300
+
+14. gifts(green): 100 32
+15. gift goal: 100
+
+17. car gas(pink): 33.56 45.67 25.4 23
+18. car gas goal: 70
+
+20. personal/fun(orange): 2 23
+21. personal/fun goal: 20
+
+23. fast offerings: 3 32
+24. extra bonus cash: 5
