@@ -1,0 +1,12 @@
+net balance: 10797.6
+natural gas: 59.13
+electricity: 23.91
+school supplies: 421
+groceries: 385.52
+gifts: 83.62
+car gas: 48.94
+personal/fun: 70.33
+number of months: 2
+last month cost of living: 1454.45
+total average: 1277.22
+Medical: 0
