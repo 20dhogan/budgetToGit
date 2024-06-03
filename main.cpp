@@ -2,25 +2,33 @@
 
 int main() {
 	// Read input file
-	size_t input_size = 25;
+	size_t input_size = 28;
 	std::vector<double> input = readFile("input.txt", input_size);
 
 	// Read memory file
-	size_t memory_size = 12;
+	size_t memory_size = 13;
 	std::vector<double> memory = readFile("memory.txt", memory_size);
 
 	//declare variables. LM stands for last month, TM stands for this month
 	int month = static_cast<int>(std::round(input[0]));
 	int year = static_cast<int>(std::round(input[1]));
-	double netTM = input[3] + input[4] - input[5] - input[6] - input[8];
-	double naturalGasTM = input[7];
-	double electricityTM = input[8];
-	double schoolSuppliesTM = input[9];
-	double groceryTM = input[11];
-	double giftTM = input[14];
-	double carGasTM = input[17];
-	double funTM = input[20];
-	double costToLiveTM = input[6] + input[7] + input[8] + input[9] + input[11] + input[14] + input[17] + input[20] + input[23] - input[24];
+	double netTM = input[3] + input[4] + input[5] - input[6] - input[7];
+	double rentTM = input[7];
+	double naturalGasTM = input[8];
+	double electricityTM = input[9];
+	double schoolSuppliesTM = input[10];
+	double medicalTM = input[11];
+	double groceryTM = input[13];
+	double groceryGoal = input[14];
+	double giftTM = input[16];
+	double giftGoal = input[17];
+	double carGasTM = input[19];
+	double carGasGoal = input[20];
+	double funTM = input[22];
+	double funGoal = input[23];
+	double extraIncome = input[25];
+	double fastOfferings = input[26];
+	double costToLiveTM = rentTM + naturalGasTM + electricityTM + schoolSuppliesTM + groceryTM + giftTM + carGasTM + funTM + medicalTM + fastOfferings - extraIncome;
 
 	double netLM = memory[0];
 	double naturalGasLM = memory[1];
@@ -33,6 +41,7 @@ int main() {
 	int numberOfMonths = static_cast<int>(std::round(memory[8]));
 	double costToLiveLM = memory[9];
 	double avgCostToLive = memory[10];
+	double medicalLM = memory[11];
 
 	double newAvgCostToLive = ((avgCostToLive * numberOfMonths) + costToLiveTM) / (numberOfMonths + 1);
 	numberOfMonths += 1;
@@ -43,13 +52,13 @@ int main() {
 	printDash();
 
 	//print goal
-	printGoal(input[12], input[11], "GROCRIES:    ");
+	printGoal(groceryGoal, groceryTM, "GROCRIES:    ");
 	printDash();
-	printGoal(input[15], input[14], "GIFTS:       ");
+	printGoal(giftGoal, giftTM, "GIFTS:       ");
 	printDash();
-	printGoal(input[18], input[17], "CAR GAS:     ");
+	printGoal(carGasGoal, carGasTM, "CAR GAS:     ");
 	printDash();
-	printGoal(input[21], input[20], "PERSONAL/FUN:");
+	printGoal(funGoal, funTM, "PERSONAL/FUN:");
 	printStar();
 
 	//print second header
@@ -76,6 +85,8 @@ int main() {
 	printCompare(carGasTM, carGasLM, "CAR GAS:     ");
 	printDash();
 	printCompare(funTM, funLM, "PERSONAL/FUN:");
+	printDash();
+	printCompare(medicalTM, medicalLM, "Medical:     ");
 	printDash();
 
 	//print monthly cost of living
@@ -116,6 +127,7 @@ int main() {
 		memoryfile_out << "number of months: " << numberOfMonths << std::endl;
 		memoryfile_out << "last month cost of living: " << costToLiveTM << std::endl;
 		memoryfile_out << "total average: " << newAvgCostToLive << std::endl;
+		memoryfile_out << "Medical: " << medicalTM << std::endl;
 		memoryfile_out.close();
 	}
 	else std::cout << "Unable to open file";

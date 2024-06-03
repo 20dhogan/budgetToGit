@@ -155,7 +155,7 @@ void printScreen() {
 	inputFile.close();
 
 	// Determine the starting index for the last 52 lines
-	size_t start = lines.size() > 52 ? lines.size() - 52 : 0;
+	size_t start = lines.size() > 54 ? lines.size() - 54 : 0;
 
 	// Print the last 52 lines
 	for (size_t i = start; i < lines.size(); ++i) {
