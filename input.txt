@@ -1,26 +1,26 @@
 0. Month to report on: 8
 1. Year: 2024
 
-3. investments:
-4. savings:
-5. checking:
-6. Amount owe to credit:
+3. investments: 9145.32
+4. savings: 5320.32
+5. checking: 1324.01
+6. Amount owe to credit: 504.98
 7. rent: 680
-8. natural gas:
-9. electricity:
+8. natural gas: 21.47
+9. electricity: 8.43
 10. school supplies(blue): 0
-11. medical/prescription:
+11. medical/prescription: 0
 
-13. groceries(yellow):
+13. groceries(yellow): 89.32 73.59 63.23 101.45 45.43
 14. grocery goal:300
 
 16. gifts(green): 0
 17. gift goal: 0
 
-19. car gas(pink):
+19. car gas(pink): 40.34 8.43 49.32
 20. car gas goal:300
 
-22. personal/fun(orange):
+22. personal/fun(orange): 408.32 54.32
 23. personal/fun goal: 515
 
 25. extra income: 0
